@@ -1,64 +1,75 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import arrow1 from '../assets/img/arrow1.svg';
-import arrow2 from '../assets/img/arrow2.svg';
-import colorSharp from "../assets/img/color-sharp.png"
+
+import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
+  const skillGroups = [
+    {
+      title: "Programming",
+      subtitle: "Languages & Problem Solving",
+      skills: ["Java",  "Data Structures & Algorithms"],
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
+    {
+      title: "Frontend Development",
+      subtitle: "Web Technologies",
+      skills: ["HTML", "CSS","JavaScript", "React", "Responsive Web Design"],
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
+    {
+      title: "Developer Tools",
+      subtitle: "Development Workflow",
+      skills: ["Git", "GitHub"  ]
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
+    {
+      title: "UI/UX Design",
+      subtitle: "Design & Prototyping",
+      skills: ["Figma", "Wireframing", "Prototyping"],
+    },
+  ];
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>I have experience in building responsive and user-friendly web applications using modern technologies.<br></br>I continuously improve my skills in frontend development, programming, and problem-solving to create better digital solutions.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Frontend-Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Java </h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>UI/UX Design</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                        </Carousel>
-                    </div>
+      <div className="container">
+        <div className="skill-bx">
+          <span className="skill-eyebrow">TECHNICAL EXPERTISE</span>
+
+          <h2>Skills & Technologies</h2>
+
+          <p className="skill-intro">
+            Technologies and tools I use to build responsive web
+            applications, develop software solutions, and create
+            user-friendly digital experiences.
+          </p>
+
+          <div className="skill-grid">
+            {skillGroups.map((group) => (
+              <div className="skill-card" key={group.title}>
+                <div className="skill-card-heading">
+                  <span className="skill-card-line"></span>
+                  <h3>{group.title}</h3>
                 </div>
-            </div>
+
+                <p className="skill-card-subtitle">
+                  {group.subtitle}
+                </p>
+
+                <div className="skill-tags">
+                  {group.skills.map((skill) => (
+                    <span className="skill-tag" key={skill}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+      </div>
+
+      <img
+        className="background-image-left"
+        src={colorSharp}
+        alt=""
+        aria-hidden="true"
+      />
     </section>
-  )
-}
+  );
+};

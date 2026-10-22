@@ -1,99 +1,149 @@
+
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-// import projImg1 from "../assets/img/project img1.png";
-import projImg1 from '../assets/img/Project img1.png';
-import projImg2 from '../assets/img/project img2.png';
-import projImg3 from '../assets/img/project img3.png';
+
+import projImg1 from "../assets/img/project img1.png";
+import projImg2 from "../assets/img/project img2.png";
+import projImg3 from "../assets/img/project img3.png";
+import projImg4 from "../assets/img/project img4.png"
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
-
   const projects = [
     {
-      title: "Calculator app",
-      description: "Builded an website using HTML CSS JS",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Music Clone App",
+      description:
+        "Developed a responsive music player interface using HTML, CSS, and JavaScript. Implemented play, pause, next, previous, progress tracking, and volume controls for an interactive music-streaming experience.",
       imgUrl: projImg3,
+      category: "web",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "NALAM – Elderly Care & Local Assistance Platform",
+      description:
+        "Built a platform that helps families discover caregiving and local assistance services for elderly individuals. Includes service discovery, caregiver information, trust and safety details, and assistance request workflows.",
       imgUrl: projImg1,
+      category: "web",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "AgentShield – Policy & Privacy Gateway for AI Agents",
+      description:
+        "Developed a full-stack security gateway that intercepts AI-agent tool requests and allows, blocks, or routes high-risk actions for human approval. Includes contextual authorization, tool-level access control, PII detection and redaction, and a real-time audit dashboard.",
       imgUrl: projImg2,
+      category: "other",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "ClassGuard – Smart Classroom Management Platform",
+      description:
+        "Designed a centralized platform for classroom activities, academic information, and parent-teacher communication. Helps teachers and parents share classroom updates and student-related information through a structured workflow.",
+      imgUrl: projImg4,
+      category: "other",
     },
   ];
+
+  const renderProjects = (category) =>
+    projects
+      .filter(
+        (project) =>
+          category === "all" || project.category === category
+      )
+      .map((project) => (
+        <ProjectCard
+          key={project.title}
+          {...project}
+        />
+      ));
 
   return (
     <section className="project" id="projects">
       <Container>
         <Row>
-          <Col size={12}>
+          <Col xs={12}>
             <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-              </div>}
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible
+                      ? "animate__animated animate__fadeIn"
+                      : ""
+                  }
+                >
+                  <h2>Projects</h2>
+
+                  <p>
+                    Here are some of the projects I have worked on
+                    across web development, application security,
+                    and classroom management. Through these
+                    projects, I have explored responsive UI design,
+                    interactive functionality, full-stack
+                    development, and practical software solutions.
+                  </p>
+
+                  <Tab.Container
+                    id="projects-tabs"
+                    defaultActiveKey="all"
+                  >
+                    <Nav
+                      variant="pills"
+                      className="nav-pills mb-5 justify-content-center align-items-center"
+                    >
+                      <Nav.Item>
+                        <Nav.Link eventKey="all">
+                          All Projects
+                        </Nav.Link>
+                      </Nav.Item>
+
+                      <Nav.Item>
+                        <Nav.Link eventKey="web">
+                          Web Development
+                        </Nav.Link>
+                      </Nav.Item>
+
+                      <Nav.Item>
+                        <Nav.Link eventKey="other">
+                          Other Projects
+                        </Nav.Link>
+                      </Nav.Item>
+                    </Nav>
+
+                    <Tab.Content
+                      id="slideInUp"
+                      className={
+                        isVisible
+                          ? "animate__animated animate__slideInUp"
+                          : ""
+                      }
+                    >
+                      <Tab.Pane eventKey="all">
+                        <Row>{renderProjects("all")}</Row>
+                      </Tab.Pane>
+
+                      <Tab.Pane eventKey="web">
+                        <Row>{renderProjects("web")}</Row>
+                      </Tab.Pane>
+
+                      <Tab.Pane eventKey="other">
+                        <Row>{renderProjects("other")}</Row>
+                      </Tab.Pane>
+                    </Tab.Content>
+                  </Tab.Container>
+                </div>
+              )}
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+
+      <img
+        className="background-image-right"
+        src={colorSharp2}
+        alt=""
+        aria-hidden="true"
+      />
     </section>
-  )
-}
+  );
+};
+
+
