@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# 🌐 Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio website! 🚀
 
-## Available Scripts
+🌐 **Live Website:** [Visit My Portfolio](https://portfolio-c344b.web.app)
 
-In the project directory, you can run:
+## 👨‍💻 About Me
 
-### `npm start`
+Hi, I'm **Anuranjan**, an IT student passionate about **software development, web technologies, and building practical applications**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I enjoy learning new technologies and working on projects that help me improve my problem-solving and development skills.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Technologies Used
 
-### `npm test`
+- **Frontend:** React.js, JavaScript, HTML5, CSS3
+- **UI:** React Bootstrap
+- **Hosting & Deployment:** Firebase Hosting
+- **Version Control:** Git & GitHub
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔥 Firebase Hosting
 
-### `npm run build`
+This portfolio website is developed using **React.js** and deployed using **Firebase Hosting**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Firebase is used specifically for **hosting and deployment** of the portfolio website.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ✨ Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Responsive portfolio website
+- About Me section
+- Skills showcase
+- Projects section
+- Social media links
+- Contact section
+- Mobile-friendly design
+- Live deployment using Firebase Hosting
 
-### `npm run eject`
+## 🚀 Run Locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clone the repository:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/Anuranjan6891/personal_portfolio.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Navigate to the project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+cd personal_portfolio
 
-### Analyzing the Bundle Size
+Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+npm install
 
-### Making a Progressive Web App
+Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm start
 
-### Advanced Configuration
+The website will run at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+http://localhost:3000
+📦 Build
 
-### Deployment
+To create a production build:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+npm run build
+🌐 Live Deployment
 
-### `npm run build` fails to minify
+This portfolio is deployed and hosted using Firebase Hosting.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🔗 Live Portfolio: https://portfolio-c344b.web.app
+
+📬 Contact
+
+Feel free to connect with me through the social links and contact section available on my portfolio website.
